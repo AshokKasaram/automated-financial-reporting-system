@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir sqlalchemy==2.0.30 pymysql==1.1.0 numpy==1.26.4 pandas==2.2.2 cryptography
+
+COPY seed_mysql.py .
+
+CMD ["python", "seed_mysql.py"]

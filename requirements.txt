@@ -1,0 +1,14 @@
+# Core data & reporting (install these first for local testing)
+pandas==2.2.2
+openpyxl==3.1.2
+faker==25.0.0
+pyarrow==16.0.0
+
+# Database (MySQL)
+sqlalchemy>=1.4.36,<2.0
+pymysql==1.1.0
+cryptography
+
+# Dashboard
+streamlit==1.35.0
+plotly==5.22.0

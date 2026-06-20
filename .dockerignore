@@ -1,0 +1,8 @@
+venv/
+logs/
+output/
+.git/
+__pycache__/
+*.pyc
+*.parquet
+*.xlsx
