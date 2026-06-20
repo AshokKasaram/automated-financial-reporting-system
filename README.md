@@ -52,9 +52,6 @@ alongside it for anyone who wants the numbers without waiting for email.
 | Airflow DAG (all green) | Streamlit dashboard | Excel report |
 |:---:|:---:|:---:|
 | *3-task pipeline, scheduled monthly* | *Live KPIs + charts from MySQL* | *P&L, Budget vs Actuals, Variance* |
-
->`docs/airflow.PNG`, `docs/dashboard.PNG`, `docs/excel.PNG`
-
 ---
 
 ## Tech stack
