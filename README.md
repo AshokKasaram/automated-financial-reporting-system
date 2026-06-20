@@ -5,9 +5,6 @@ generates a polished multi-sheet Excel report, emails it on a monthly schedule,
 and powers a live Streamlit dashboard — fully containerized and orchestrated
 with Apache Airflow.
 
-Built to demonstrate the data engineering, BI, and FP&A workflow skills behind
-roles like **BI Analyst**, **Financial Analyst**, and **Strategy & Operations**.
-
 ![Status](https://img.shields.io/badge/status-working-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![Airflow](https://img.shields.io/badge/orchestration-Apache%20Airflow-017CEE)
