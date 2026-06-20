@@ -47,7 +47,9 @@ alongside it for anyone who wants the numbers without waiting for email.
 |:---:|:---:|
 | ![Airflow DAG run, all three tasks succeeded](docs/airflow.PNG) | ![Streamlit dashboard showing live MySQL data](docs/dashboard.PNG) |
 
-![Excel report - P&L Summary sheet with color-coded variance](docs/excel.PNG)
+| Email delivery | Excel report |
+|:---:|:---:|
+| ![Automated email with report attached](docs/samplemail.PNG) | ![Excel report - P&L Summary sheet with color-coded variance](docs/excel.PNG) |
 
 | Airflow DAG (all green) | Streamlit dashboard | Excel report |
 |:---:|:---:|:---:|
