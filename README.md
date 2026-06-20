@@ -43,6 +43,12 @@ alongside it for anyone who wants the numbers without waiting for email.
 
 ## Screenshots
 
+| Airflow DAG (all green) | Streamlit dashboard |
+|:---:|:---:|
+| ![Airflow DAG run, all three tasks succeeded](docs/airflow.PNG) | ![Streamlit dashboard showing live MySQL data](docs/dashboard.PNG) |
+
+![Excel report - P&L Summary sheet with color-coded variance](docs/excel.PNG)
+
 | Airflow DAG (all green) | Streamlit dashboard | Excel report |
 |:---:|:---:|:---:|
 | *3-task pipeline, scheduled monthly* | *Live KPIs + charts from MySQL* | *P&L, Budget vs Actuals, Variance* |
