@@ -47,7 +47,7 @@ alongside it for anyone who wants the numbers without waiting for email.
 |:---:|:---:|:---:|
 | *3-task pipeline, scheduled monthly* | *Live KPIs + charts from MySQL* | *P&L, Budget vs Actuals, Variance* |
 
-> Add your own screenshots here — `docs/airflow.png`, `docs/dashboard.png`, `docs/excel.png`
+>`docs/airflow.PNG`, `docs/dashboard.PNG`, `docs/excel.PNG`
 
 ---
 
