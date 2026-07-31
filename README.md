@@ -148,7 +148,5 @@ field in `dags/financial_report_dag.py`.
 
 KPI cards (total budget, total actual, variance, accounts over budget),
 monthly budget-vs-actual bar chart, spend-by-category donut, and a
-color-coded variance table — filterable by year and category, refreshable
+color-coded variance table which can be filterable by year and category, refreshable
 on demand.
-
-eamlit Community Cloud
