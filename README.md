@@ -90,7 +90,7 @@ financial-reporter/
 
 ---
 
-## Quickstart — local only (no Docker)
+## To start
 
 ```bash
 pip install -r requirements.txt
@@ -151,50 +151,4 @@ monthly budget-vs-actual bar chart, spend-by-category donut, and a
 color-coded variance table — filterable by year and category, refreshable
 on demand.
 
----
-
-## Swapping in your own data
-
-The pipeline doesn't care where rows come from as long as the schema matches.
-Point `DATABASE_URL` at your own MySQL instance and adjust the `SELECT` in
-`fetch_ledger_from_db()` (`src/data/generate_data.py`) to match your table.
-
----
-
-## Build & debug notes
-
-This project was built and debugged end-to-end on Windows + Docker Desktop,
-which surfaced a realistic set of infrastructure problems beyond the code
-itself:
-
-- **BIOS virtualization disabled** — Docker Desktop wouldn't start until
-  Intel VT-x was enabled in BIOS and WSL2 was properly configured.
-- **Airflow's `_PIP_ADDITIONAL_REQUIREMENTS`** reinstalls packages on every
-  container start — replaced with a custom `Dockerfile.airflow` that bakes
-  dependencies in at build time (faster, and the officially recommended
-  approach for anything beyond quick testing).
-- **Windows volume permission errors** — `airflow-init` couldn't write to
-  the mounted `logs/` folder; fixed by running the init step as root and
-  setting permissions explicitly before handing off to the `airflow` user.
-- **SQLAlchemy 1.4 vs 2.x incompatibilities** — `pd.read_sql()` with a raw
-  query string behaved differently across versions in three separate places
-  (the dashboard, the DAG's data layer). Fixed by querying through
-  `engine.connect()` + `conn.execute(sa.text(...))` directly and building
-  the DataFrame from the result set, which is stable across both versions.
-- **Docker build context errors on Windows** — a symlink left behind by
-  Airflow's logs (`logs/scheduler/latest`) blocked `docker build` from
-  reading the project directory; solved with a `.dockerignore` excluding
-  `logs/`, `venv/`, and `output/` from build contexts.
-
-Each of these is the kind of issue that shows up in real local-dev and
-CI environments, not just in this project.
-
----
-
-## Roadmap / possible extensions
-
-- [ ] Data quality checks (null/negative-value validation) with Slack/email alerting on failure
-- [ ] CI workflow (GitHub Actions) to lint and smoke-test on every push
-- [ ] Cloud deployment — Cloud Composer (Airflow) + Cloud SQL (MySQL)
-- [ ] Forecasting sheet using historical trend data
-- [ ] Public dashboard deploy via Streamlit Community Cloud
+eamlit Community Cloud
